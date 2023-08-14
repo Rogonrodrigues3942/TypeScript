@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> typecript - módulos </title>
+</head>
+<body>
+    <h1>REVISÃO DE MÓDULOS - TYPESCRIPT</h1>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <!-- <script src="./modulos/modulos.js"></script> -->
+    <script>
+        <!-- Resolvendo a questão da extensões js -->
+        SystemJS.config({
+            baseUrl: '/modulos',
+            packages:{
+                '/modulos':{
+                    defaultJSExtension: true
+                }
+            }
+        })
+        SystemJS.import('./modulos/modulos.js')
+    </script>
+</body>
+</html>
